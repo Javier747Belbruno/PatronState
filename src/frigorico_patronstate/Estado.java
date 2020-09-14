@@ -4,13 +4,15 @@ package frigorico_patronstate;
  *
  * @author Javier
  */
-public class Estado {
+public abstract class Estado {
     private String ambito;
     private String nombre;
     
     public void paraEntregar(Remito remito){};
 
     public void enPlanDeEntrega(CorteVacuno corteVacuno) {};
+    
+    public Estado crearEstado(){return this;};
     
     public String getAmbito() {
         return ambito;

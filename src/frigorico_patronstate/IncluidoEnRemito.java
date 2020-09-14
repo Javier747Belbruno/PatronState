@@ -6,6 +6,7 @@ package frigorico_patronstate;
  */
 public class IncluidoEnRemito extends Estado {
     
+    @Override
     public Estado crearEstado() {
         EnPlanDeEntrega enPlanDeEntrega = new EnPlanDeEntrega();
         return enPlanDeEntrega;

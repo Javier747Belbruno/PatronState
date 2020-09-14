@@ -9,6 +9,7 @@ public class Pendiente extends Estado {
     public Pendiente() {
     }
 
+    @Override
     public Estado crearEstado(){
         ParaEntregar paraEntregar = new ParaEntregar();
         return paraEntregar;
