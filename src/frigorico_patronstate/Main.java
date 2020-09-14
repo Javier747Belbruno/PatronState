@@ -1,10 +1,7 @@
 package frigorico_patronstate;
 
-import java.time.Duration;
 import java.time.Instant;
 import java.util.Date;
-
-
 
 /**
  *
@@ -25,7 +22,6 @@ public class Main {
     CorteVacuno cv3 = new CorteVacuno(3 , (float)18 , 8950, Date.from(now), Date.from(now),Date.from(now));
     CorteVacuno cv4 = new CorteVacuno(4 , (float)60 , 950, Date.from(now), Date.from(now),Date.from(now));
 
-    
     //Vector de cv
     CorteVacuno[] CVParaR1 = {cv1,cv2};
     CorteVacuno[] CVParaR2 = {cv3,cv4};
@@ -44,8 +40,7 @@ public class Main {
     gestor.setRemitos(remitos);
     
     //Metodo de inicio.
-    gestor.actualizarEstadoRemitos();
-       
-    }
+    gestor.actualizarEstadoRemitos();   
+ }
     
 }

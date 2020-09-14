@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package frigorico_patronstate;
 
 import java.util.Date;
@@ -18,14 +13,6 @@ public class Remito {
     private Estado estado;
     private CorteVacuno[] cortesVacunos;
     
-    public void actualizarEstadoCortesVacunos(){
-        
-    }
-    
-    public void paraEntregar(){
-        estado.paraEntregar(this);
-    }
-
     public Remito( Integer numero, CorteVacuno[] cortesVacunos , Date fecha, Date fechaEntrega) {
         this.fecha = fecha;
         this.fechaEntrega = fechaEntrega;
@@ -34,7 +21,9 @@ public class Remito {
         this.estado = new Pendiente();////////////////////////////////
     }
 
-    
+    public void paraEntregar(){
+        estado.paraEntregar(this);
+    }
 
     public Date getFecha() {
         return fecha;
@@ -75,7 +64,5 @@ public class Remito {
     public void setCortesVacunos(CorteVacuno[] cortesVacunos) {
         this.cortesVacunos = cortesVacunos;
     }
-    
-    
     
 }

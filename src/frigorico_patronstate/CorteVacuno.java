@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package frigorico_patronstate;
 
 import java.util.Date;
@@ -12,14 +7,13 @@ import java.util.Date;
  * @author Javier
  */
 public class CorteVacuno {
-    private Date fechaComercializacion;
-    private Date fechaEnvasado;
-    private Date fechaVencimiento;
     private Integer nroSecuencia;
     private Float peso;
     private Integer precioCorteVacuno;
     private Estado estado;
-
+    private Date fechaComercializacion;
+    private Date fechaEnvasado;
+    private Date fechaVencimiento;
     
     public void enPlanEntrega() {
         estado.enPlanDeEntrega(this);
@@ -33,7 +27,6 @@ public class CorteVacuno {
         this.estado = estado;
     }
 
-
     public CorteVacuno( Integer nroSecuencia, Float peso, Integer precioCorteVacuno , Date fechaComercializacion, Date fechaEnvasado, Date fechaVencimiento) {
         this.fechaComercializacion = fechaComercializacion;
         this.fechaEnvasado = fechaEnvasado;
@@ -44,7 +37,6 @@ public class CorteVacuno {
         this.estado = new IncluidoEnRemito();
     }
     
-
     public Date getFechaComercializacion() {
         return fechaComercializacion;
     }
@@ -97,10 +89,4 @@ public class CorteVacuno {
     public String toString() {
         return "CorteVacuno{" + "fechaComercializacion=" + fechaComercializacion + ", fechaEnvasado=" + fechaEnvasado + ", fechaVencimiento=" + fechaVencimiento + ", nroSecuencia=" + nroSecuencia + ", peso=" + peso + ", precioCorteVacuno=" + precioCorteVacuno + '}';
     }
-
-    
-    
-    
-    
-    
 }
